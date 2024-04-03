@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-import Segment
-import SegmentFirebase
+import Journify
+import JournifyFirebase
 
 @main
 struct BasicExampleApp: App {
@@ -19,13 +19,13 @@ struct BasicExampleApp: App {
     }
     
     init() {
-        Analytics.main.add(plugin: FirebaseDestination())
+        Journify.shared().add(plugin: FirebaseDestination())
     }
 }
 
-extension Analytics {
-    static var main: Analytics {
-        let analytics = Analytics(configuration: Configuration(writeKey: "<YOUR WRITE KEY>")
+extension Journify {
+    static var main: Journify {
+        let analytics = Journify(configuration: Configuration(writeKey: "<YOUR WRITE KEY>")
                     .flushAt(3)
                     .trackApplicationLifecycleEvents(true))
         return analytics

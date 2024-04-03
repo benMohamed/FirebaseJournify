@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		10C049AF2BBD970600B8586F /* JournifyFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = 10C049AE2BBD970600B8586F /* JournifyFirebase */; };
 		465ACC5927D00D250025BD02 /* SegmentFirebase in Frameworks */ = {isa = PBXBuildFile; productRef = 465ACC5827D00D250025BD02 /* SegmentFirebase */; };
 		46EDC6F627C6B8D100B870D7 /* BasicExampleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EDC6F527C6B8D100B870D7 /* BasicExampleApp.swift */; };
 		46EDC6F827C6B8D100B870D7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EDC6F727C6B8D100B870D7 /* ContentView.swift */; };
@@ -15,7 +16,6 @@
 		46EDC70727C6B8D200B870D7 /* BasicExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EDC70627C6B8D200B870D7 /* BasicExampleTests.swift */; };
 		46EDC71127C6B8D200B870D7 /* BasicExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EDC71027C6B8D200B870D7 /* BasicExampleUITests.swift */; };
 		46EDC71327C6B8D200B870D7 /* BasicExampleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EDC71227C6B8D200B870D7 /* BasicExampleUITestsLaunchTests.swift */; };
-		46EDC72127C6B92C00B870D7 /* Segment in Frameworks */ = {isa = PBXBuildFile; productRef = 46EDC72027C6B92C00B870D7 /* Segment */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +53,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46EDC72127C6B92C00B870D7 /* Segment in Frameworks */,
 				465ACC5927D00D250025BD02 /* SegmentFirebase in Frameworks */,
+				10C049AF2BBD970600B8586F /* JournifyFirebase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,8 +156,8 @@
 			);
 			name = BasicExample;
 			packageProductDependencies = (
-				46EDC72027C6B92C00B870D7 /* Segment */,
 				465ACC5827D00D250025BD02 /* SegmentFirebase */,
+				10C049AE2BBD970600B8586F /* JournifyFirebase */,
 			);
 			productName = BasicExample;
 			productReference = 46EDC6F227C6B8D100B870D7 /* BasicExample.app */;
@@ -232,7 +232,7 @@
 			);
 			mainGroup = 46EDC6E927C6B8D100B870D7;
 			packageReferences = (
-				46EDC71F27C6B92C00B870D7 /* XCRemoteSwiftPackageReference "analytics-swift" */,
+				10C049AD2BBD970600B8586F /* XCRemoteSwiftPackageReference "FirebaseJournify" */,
 			);
 			productRefGroup = 46EDC6F327C6B8D100B870D7 /* Products */;
 			projectDirPath = "";
@@ -602,25 +602,25 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		46EDC71F27C6B92C00B870D7 /* XCRemoteSwiftPackageReference "analytics-swift" */ = {
+		10C049AD2BBD970600B8586F /* XCRemoteSwiftPackageReference "FirebaseJournify" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/segmentio/analytics-swift";
+			repositoryURL = "https://github.com/benMohamed/FirebaseJournify";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.1.2;
+				branch = master;
+				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		10C049AE2BBD970600B8586F /* JournifyFirebase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 10C049AD2BBD970600B8586F /* XCRemoteSwiftPackageReference "FirebaseJournify" */;
+			productName = JournifyFirebase;
+		};
 		465ACC5827D00D250025BD02 /* SegmentFirebase */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SegmentFirebase;
-		};
-		46EDC72027C6B92C00B870D7 /* Segment */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 46EDC71F27C6B92C00B870D7 /* XCRemoteSwiftPackageReference "analytics-swift" */;
-			productName = Segment;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

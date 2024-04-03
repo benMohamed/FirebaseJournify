@@ -6,41 +6,40 @@
 //
 
 import SwiftUI
-import Segment
+import Journify
 
 struct ContentView: View {
     var body: some View {
         VStack {
             HStack {
                 Button(action: {
-                    Analytics.main.track(name: "Track")
+                    Journify.shared().track(name: "Track")
                 }, label: {
                     Text("Track")
                 }).padding(6)
                 Button(action: {
-                    Analytics.main.screen(title: "Screen appeared")
+                    Journify.shared().screen(title: "Screen appeared")
                 }, label: {
                     Text("Screen")
                 }).padding(6)
             }.padding(8)
             HStack {
                 Button(action: {
-                    Analytics.main.group(groupId: "12345-Group")
-                    Analytics.main.log(message: "Started group")
+                    Journify.shared().log(message: "Started group")
                 }, label: {
                     Text("Group")
                 }).padding(6)
                 Button(action: {
-                    Analytics.main.identify(userId: "X-1234567890")
+                    Journify.shared().identify(userId: "X-1234567890")
                 }, label: {
                     Text("Identify")
                 }).padding(6)
             }.padding(8)
         }.onAppear {
-            Analytics.main.track(name: "onAppear")
+            Journify.shared().track(name: "onAppear")
             print("Executed Analytics onAppear()")
         }.onDisappear {
-            Analytics.main.track(name: "onDisappear")
+            Journify.shared().track(name: "onDisappear")
             print("Executed Analytics onDisappear()")
         }
     }
