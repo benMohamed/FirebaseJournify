@@ -19,13 +19,14 @@ struct BasicExampleApp: App {
     }
     
     init() {
+        Journify.debugLogsEnabled = true
         Journify.shared().add(plugin: FirebaseDestination())
     }
 }
 
 extension Journify {
     static var main: Journify {
-        let analytics = Journify(configuration: Configuration(writeKey: "<YOUR WRITE KEY>")
+        let analytics = Journify(configuration: Configuration(writeKey: "wk_test_2e3FAENdDb7qMMF4qYRY4q93vQL")
                     .flushAt(3)
                     .trackApplicationLifecycleEvents(true))
         return analytics
