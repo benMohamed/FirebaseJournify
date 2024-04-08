@@ -26,7 +26,7 @@ open class FirebaseDestination: DestinationPlugin {
     
     open func update(settings: Settings, type: UpdateType) {
         // we've already set up this singleton SDK, can't do it again, so skip.
-        guard type == .initial else { return }
+//        guard type == .initial else { return }
         
         if let firebaseSettings: FirebaseSettings = settings.integrationSettings(forPlugin: self) {
             if let deepLinkURLScheme = firebaseSettings.deepLinkURLScheme {
