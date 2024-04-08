@@ -15,7 +15,7 @@ import FirebaseAnalytics
 open class FirebaseDestination: DestinationPlugin {
     public let timeline = Timeline()
     public let type = PluginType.destination
-    public let key = "Firebase"
+    public let key = "firebase"
     public var analytics: Journify? = nil
 
     private var firebaseOptions: FirebaseOptions? = nil
