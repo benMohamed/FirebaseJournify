@@ -23,7 +23,7 @@ let package = Package(
         .package(
             name: "Journify",
             url: "https://github.com/journifyio/journify-ios-sdk.git",
-            .branch("Dev")
+            from: "0.0.7"
         ),
 		.package(
 			name: "Firebase",

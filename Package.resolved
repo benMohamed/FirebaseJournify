@@ -86,9 +86,9 @@
         "package": "Journify",
         "repositoryURL": "https://github.com/journifyio/journify-ios-sdk.git",
         "state": {
-          "branch": "Dev",
+          "branch": null,
           "revision": "a0be5d18733d128532afc40552bc28c7147e13c0",
-          "version": null
+          "version": "0.0.7"
         }
       },
       {

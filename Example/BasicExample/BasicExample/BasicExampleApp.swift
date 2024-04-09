@@ -8,6 +8,7 @@
 import SwiftUI
 import Journify
 import JournifyFirebase
+import Firebase
 
 @main
 struct BasicExampleApp: App {
@@ -20,15 +21,11 @@ struct BasicExampleApp: App {
     
     init() {
         Journify.debugLogsEnabled = true
+        let configuration = Configuration(writeKey: "wk_2e3FAENdDb7qMMF4qYRY4q93vQL")
+            .trackApplicationLifecycleEvents(true)
+            .flushInterval(10)
+        Journify.setup(with: configuration)
         Journify.shared().add(plugin: FirebaseDestination())
-    }
-}
-
-extension Journify {
-    static var main: Journify {
-        let analytics = Journify(configuration: Configuration(writeKey: "wk_test_2e3FAENdDb7qMMF4qYRY4q93vQL")
-                    .flushAt(3)
-                    .trackApplicationLifecycleEvents(true))
-        return analytics
+        Firebase.Analytics.setAnalyticsCollectionEnabled(true)
     }
 }
