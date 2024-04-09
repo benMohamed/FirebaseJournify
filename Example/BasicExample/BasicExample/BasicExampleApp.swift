@@ -26,6 +26,5 @@ struct BasicExampleApp: App {
             .flushInterval(10)
         Journify.setup(with: configuration)
         Journify.shared().add(plugin: FirebaseDestination())
-        Firebase.Analytics.setAnalyticsCollectionEnabled(true)
     }
 }
